@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "Name": "Gaming Laptops"
+  },
+  {
+    "Id": 2,
+    "Name": "Business Laptops"
+  },
+  {
+    "Id": 3,
+    "Name": "Gaming PC"
+  },
+  {
+    "Id": 4,
+    "Name": "Business PC"
+  }
+]
