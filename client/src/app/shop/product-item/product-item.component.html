@@ -11,6 +11,6 @@
         <a routerLink="/shop/{{product.id}}" style="color:#006d7799;">
             <h6 class="text-uppercase" style="color:#006d7799;">{{product.name}}</h6>
         </a>
-        <span class="mb-2">{{product.price | currency}}</span>
+        <span class="mb-2">{{product.price|currency:"RON ":"symbol"}}</span>
     </div>
 </div>

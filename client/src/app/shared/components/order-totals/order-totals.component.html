@@ -6,15 +6,15 @@
     <ul class="list-unstyled mb-4">
         <li class="d-flex justify-content-between py-3 border-bottom">
             <strong class="text-muted">Order subtotals</strong>
-            <strong>{{subtotal | currency}}</strong>
+            <strong>{{subtotal | currency:"RON ":"symbol"}}</strong>
         </li>
         <li class="d-flex justify-content-between py-3 border-bottom">
             <strong class="text-muted">Shipping and handling</strong>
-            <strong>{{shippingPrice | currency}}</strong>
+            <strong>{{shippingPrice | currency:"RON ":"symbol"}}</strong>
         </li>
         <li class="d-flex justify-content-between py-3 border-bottom">
             <strong class="text-muted">Total</strong>
-            <strong>{{total | currency}}</strong>
+            <strong>{{total | currency:"RON ":"symbol"}}</strong>
         </li>
     </ul>
 </div>

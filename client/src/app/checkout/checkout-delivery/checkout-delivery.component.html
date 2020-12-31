@@ -9,7 +9,7 @@
                 formControlName="deliveryMethod"
                 class="custom-control-input">
             <label for="{{method.id}}" class="custom-control-label">
-                <strong>{{method.shortName}} - {{method.price | currency}}</strong>
+                <strong>{{method.shortName}} - {{method.price | currency:"RON ":"symbol"}}</strong>
                 <br>
                 <span class="label-description">{{method.description}}</span>
             </label>
@@ -18,10 +18,10 @@
 </div>
 
 <div class="float-none d-flex justify-content-between flex-column flex-lg-row mb-5">
-    <button class="btn btn-outline-primary" cdkStepperPrevious>
+    <button class="btn btn-outline-info" cdkStepperPrevious>
         <i class="fa fa-angle-left"></i> Back to Address
     </button>
-    <button [disabled]="checkoutForm.get('deliveryForm').invalid" class="btn btn-primary" cdkStepperNext>
+    <button [disabled]="checkoutForm.get('deliveryForm').invalid" class="btn btn-info" cdkStepperNext>
         Go to Review <i class="fa fa-angle-right"></i>
     </button>
 </div>
