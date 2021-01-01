@@ -25,13 +25,29 @@
     </nav>
     
     <div class="d-flex align-items-center">
-        <a routerLink="/basket" class="position-relative">
+        <ng-container *ngIf="(currentUser$ | async) === null">
+          <a routerLink="/basket" class="position-relative">
             <span style="color: #006d77;">
               <i class="fa fa-shopping-cart fa-2x mr-5"></i>
             </span>
             
             <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
-        </a>
+          </a>
+        </ng-container>
+
+        <ng-container *ngIf="(currentUser$ | async) !== null">
+          <ng-container *ngIf="((currentUser$ | async).email !== adminEmail)">
+            <a routerLink="/basket" class="position-relative">
+              <span style="color: #006d77;">
+                <i class="fa fa-shopping-cart fa-2x mr-5"></i>
+              </span>
+              
+              <div *ngIf="(basket$ | async)" class="cart-no">{{(basket$ | async).items.length}}</div>
+            </a>
+          </ng-container>
+        </ng-container>
+        
+        
         <ng-container *ngIf="(currentUser$ | async) === null">
           <a routerLink="/account/login" class="btn btn-outline-secondary mr-2">Login</a>
           <a routerLink="/account/register" class="btn btn-outline-secondary mr-3">Sign up</a>
@@ -42,15 +58,27 @@
               <strong>Welcome {{(currentUser$ | async).displayName}}</strong>
             </a>
             <div class="dropdown-menu dropdown-menu-right" style="cursor: pointer;" *dropdownMenu>
-              <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
-                <i class="fa fa-shopping-cart mr-3"></i> View basket
-              </a>
-
-              <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
-                <i class="fa fa-history mr-3"></i> View orders
-              </a>
-
-              <div class="dropdown-divider"></div>
+              <ng-container *ngIf="((currentUser$ | async).email !== adminEmail)">
+                <a routerLink="/basket" class="dropdown-item d-flex align-items-center py-2">
+                  <i class="fa fa-shopping-cart mr-3"></i> View basket
+                </a>
+              </ng-container>
+              
+              <ng-container *ngIf="((currentUser$ | async).email !== adminEmail)">
+                <a routerLink="/orders" class="dropdown-item d-flex align-items-center py-2">
+                  <i class="fa fa-history mr-3"></i> View orders
+                </a>
+              </ng-container>
+          
+              <ng-container *ngIf="(currentUser$ | async) === null">
+                <div class="dropdown-divider"></div>
+              </ng-container>
+              
+              <ng-container *ngIf="(currentUser$ | async) !== null">
+                <ng-container *ngIf="((currentUser$ | async).email !== adminEmail)">
+                  <div class="dropdown-divider"></div>
+                </ng-container>
+              </ng-container>
 
               <a (click)="logout()" class="dropdown-item d-flex align-items-center py-2">
                 <i class="fa fa-sign-out mr-3"></i> Log out
