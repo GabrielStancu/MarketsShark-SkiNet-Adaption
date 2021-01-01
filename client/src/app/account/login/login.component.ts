@@ -10,13 +10,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  returnUrl: string;
+  returnUrlUser: string;
+  returnUrlAdmin: string;
 
   constructor(private accountService: AccountService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void{
     console.log('login reached...');
-    this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl || '/shop';
+    this.returnUrlUser = this.activatedRoute.snapshot.queryParams.returnUrl || '/shop';
+    this.returnUrlAdmin = '/test-error';
     this.createLoginForm();
   }
 
@@ -30,7 +32,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void{
     this.accountService.login(this.loginForm.value).subscribe(() => {
-      this.router.navigateByUrl(this.returnUrl);
+      if (this.loginForm.value.email === this.accountService.adminEmail){
+        this.router.navigateByUrl(this.returnUrlAdmin);
+      } else {
+        this.router.navigateByUrl(this.returnUrlUser);
+      }
     }, error => {
       console.log(error);
     });
