@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AccountService } from 'src/app/account/account.service';
+import { IUser } from 'src/app/shared/models/user';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -14,11 +17,15 @@ export class AdminComponent implements OnInit {
   disabled = 'disabled';
   vendors = ['emag', 'cel.ro', 'pcgarage'];
   enabledVendors = [false, false, false];
+  currentUser$: Observable<IUser>;
+  adminEmail: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private accountService: AccountService) { }
 
   ngOnInit(): void {
     this.getCurrentEnabledVendors();
+    this.currentUser$ = this.accountService.currentUser$;
+    this.adminEmail = this.accountService.adminEmail;
   }
 
   private getCurrentEnabledVendors(): void{
