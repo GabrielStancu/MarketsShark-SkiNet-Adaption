@@ -20,7 +20,7 @@
         <a class="p-2" *ngIf="((currentUser$ | async).email !== adminEmail)" routerLink="/shop" routerLinkActive="active">Shop</a>
       </ng-container>
       <ng-container *ngIf="currentUser$ | async">
-        <a class="p-2" *ngIf="((currentUser$ | async).email === adminEmail)" routerLink="/test-error" routerLinkActive="active">Admin</a>
+        <a class="p-2" *ngIf="((currentUser$ | async).email === adminEmail)" routerLink="/admin" routerLinkActive="active">Admin</a>
       </ng-container>
     </nav>
     

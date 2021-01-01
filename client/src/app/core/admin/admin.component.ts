@@ -4,16 +4,31 @@ import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-test-error',
-  templateUrl: './test-error.component.html',
-  styleUrls: ['./test-error.component.scss']
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class TestErrorComponent implements OnInit {
+export class AdminComponent implements OnInit {
   baseUrl = environment.apiUrl;
   validationErrors: any;
+  enabled = 'enabled';
+  disabled = 'disabled';
+  vendors = ['emag', 'cel.ro', 'pcgarage'];
+  enabledVendors = [false, false, false];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getCurrentEnabledVendors();
+  }
+
+  private getCurrentEnabledVendors(): void{
+    for (const vendor in this.enabledVendors){
+      if (localStorage.getItem(this.vendors[vendor]) === null || localStorage.getItem(this.vendors[vendor]) === this.disabled){
+        this.enabledVendors[vendor] = false;
+      } else {
+        this.enabledVendors[vendor] = true;
+      }
+    }
   }
 
   get404Error(): void {
@@ -49,5 +64,13 @@ export class TestErrorComponent implements OnInit {
     });
   }
 
-
+  enableVendor(id: number): void{
+    if (localStorage.getItem(this.vendors[id]) === null){
+      localStorage.setItem(this.vendors[id], this.enabled);
+    } else if (localStorage.getItem(this.vendors[id]) === this.enabled){
+      localStorage.setItem(this.vendors[id], this.disabled);
+    } else if (localStorage.getItem(this.vendors[id]) === this.disabled){
+      localStorage.setItem(this.vendors[id], this.enabled);
+    }
+  }
 }

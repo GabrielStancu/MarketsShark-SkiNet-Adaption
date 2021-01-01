@@ -16,9 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(private accountService: AccountService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void{
-    console.log('login reached...');
     this.returnUrlUser = this.activatedRoute.snapshot.queryParams.returnUrl || '/shop';
-    this.returnUrlAdmin = '/test-error';
+    this.returnUrlAdmin = '/admin';
     this.createLoginForm();
   }
 
