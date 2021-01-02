@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Inject, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 import { BreadcrumbService } from 'xng-breadcrumb';
 import { ShopService } from '../shop.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-product-details',
@@ -15,7 +16,8 @@ export class ProductDetailsComponent implements OnInit {
   quantity = 1;
 
   constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute,
-              private bcService: BreadcrumbService, private basketService: BasketService) {
+              private bcService: BreadcrumbService, private basketService: BasketService,
+              @Inject(DOCUMENT) private document: Document) {
     this.bcService.set('@productDetails', '');
    }
 
@@ -44,5 +46,9 @@ export class ProductDetailsComponent implements OnInit {
     }, (error: any) => {
       console.log(error);
     });
+  }
+
+  goToProductPage(): void{
+    this.document.location.href = this.product.productUrl;
   }
 }

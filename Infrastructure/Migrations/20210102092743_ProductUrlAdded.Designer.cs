@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Infrastructure.Data.Migrations
+namespace Infrastructure.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20201226155252_OrderEntityAdded")]
-    partial class OrderEntityAdded
+    [Migration("20210102092743_ProductUrlAdded")]
+    partial class ProductUrlAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,8 +53,8 @@ namespace Infrastructure.Data.Migrations
                     b.Property<int?>("DeliveryMethodId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTimeOffset>("OrderDate")
-                        .HasColumnType("TEXT");
+                    b.Property<long>("OrderDate")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PaymentIntentId")
                         .HasColumnType("TEXT");
@@ -84,6 +84,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<double>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ProductUrl")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
@@ -123,6 +126,10 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("ProductUrl")
+                        .HasColumnType("TEXT")
+                        .HasMaxLength(180);
 
                     b.HasKey("Id");
 

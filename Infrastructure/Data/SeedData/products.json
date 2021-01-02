@@ -5,7 +5,8 @@
     "Price": 4499.99,
     "PictureUrl": "https://s13emagst.akamaized.net/products/29938/29937179/images/res_51756f0996d627d2ec9a6af69415abbf.jpg?width=450&amp;height=450&amp;hash=42A19B281D91D171291142BAD7D8E844",
     "ProductTypeId": 1,
-    "ProductBrandId": 1
+    "ProductBrandId": 1,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   },
   {
     "Name": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U",
@@ -13,7 +14,8 @@
     "Price": 3814.00,
     "PictureUrl": "https://s13emagst.akamaized.net/products/29990/29989317/images/res_85398c25d5bfbba8dbcb994bb298b5e6.jpg?width=450&amp;height=450&amp;hash=0F7ADE24962D5B6ED908754958CEA178",
     "ProductTypeId": 2,
-    "ProductBrandId": 3
+    "ProductBrandId": 3,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   },
   {
     "Name": "Sistem Desktop PC Serioux",
@@ -21,7 +23,8 @@
     "Price": 1599.99,
     "PictureUrl": "https://s13emagst.akamaized.net/products/24343/24342051/images/res_e201754022e02ab3a0763f8cf2ed3452.jpg?width=450&amp;height=450&amp;hash=3DFFF34BC1072C71D4C730F811A0F4B1",
     "ProductTypeId": 3,
-    "ProductBrandId": 6
+    "ProductBrandId": 6,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   },
   {
     "Name": "Sistem Desktop PC Dell OptiPlex 3070 MT",
@@ -29,7 +32,8 @@
     "Price": 3399.99,
     "PictureUrl": "https://s13emagst.akamaized.net/products/27865/27864735/images/res_485287b866ea14e12cdedb7d2a652fcd.jpg?width=450&amp;height=450&amp;hash=37DD0DB8EA439324EC514A3B45297BD6",
     "ProductTypeId": 4,
-    "ProductBrandId": 5
+    "ProductBrandId": 5,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   },
   {
     "Name": "Laptop Gaming OMEN by HP 15-dh1009nq",
@@ -37,7 +41,8 @@
     "Price": 7799.99,
     "PictureUrl": "https://s13emagst.akamaized.net/products/32629/32628277/images/res_9d9936c2c3c49c148c25f21718ab1778.jpg?width=450&amp;height=450&amp;hash=9D350469C0920DA7ABBA0BDF079EAE99",
     "ProductTypeId": 1,
-    "ProductBrandId": 2
+    "ProductBrandId": 2,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   },
   {
     "Name": "Sistem Desktop PC HP 290 G3 MT",
@@ -45,150 +50,7 @@
     "Price": 2199.99,
     "PictureUrl": "https://s13emagst.akamaized.net/products/27845/27844773/images/res_c2bd16daba281ce8dc4322c313fb55d4.jpg?width=450&amp;height=450&amp;hash=B836E355BAC1BB31ADFD8DD2A618FA80",
     "ProductTypeId": 4,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Laptop Gaming ASUS ROG Strix G15 G512LI",
-    "Description": "Laptop Gaming ASUS ROG Strix G15 G512LI cu procesor Intel® Core™ i5-10300H pana la 4.50 GHz, 15.6\", Full HD, 144Hz, 8GB, 512GB SSD, NVIDIA GeForce GTX 1650 Ti 4GB, Free DOS, Black",
-    "Price": 4499.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29938/29937179/images/res_51756f0996d627d2ec9a6af69415abbf.jpg?width=450&amp;height=450&amp;hash=42A19B281D91D171291142BAD7D8E844",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U",
-    "Description": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U pana la 4.20 GHz, 15.6”, Full HD, 8GB, 256GB SSD, Intel UHD Graphics 620, Free DOS, Black",
-    "Price": 3814.00,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29990/29989317/images/res_85398c25d5bfbba8dbcb994bb298b5e6.jpg?width=450&amp;height=450&amp;hash=0F7ADE24962D5B6ED908754958CEA178",
-    "ProductTypeId": 2,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Sistem Desktop PC Serioux",
-    "Description": "Sistem Desktop PC Serioux cu procesor AMD Ryzen 3 3200G pana la 4.0GHz, 8GB DDR4, 256GB SSD + 1TB HDD, Radeon™ Vega 8",
-    "Price": 1599.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/24343/24342051/images/res_e201754022e02ab3a0763f8cf2ed3452.jpg?width=450&amp;height=450&amp;hash=3DFFF34BC1072C71D4C730F811A0F4B1",
-    "ProductTypeId": 3,
-    "ProductBrandId": 6
-  },
-  {
-    "Name": "Sistem Desktop PC Dell OptiPlex 3070 MT",
-    "Description": "Sistem Desktop PC Dell OptiPlex 3070 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 8GB DDR4, 256GB SSD M.2 PCIe, Intel UHD Graphics 630, Microsoft Windows 10 Pro, Black",
-    "Price": 3399.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27865/27864735/images/res_485287b866ea14e12cdedb7d2a652fcd.jpg?width=450&amp;height=450&amp;hash=37DD0DB8EA439324EC514A3B45297BD6",
-    "ProductTypeId": 4,
-    "ProductBrandId": 5
-  },
-  {
-    "Name": "Laptop Gaming OMEN by HP 15-dh1009nq",
-    "Description": "Laptop Gaming OMEN by HP 15-dh1009nq cu procesor Intel® Core™ i7-10750H pana la 5.00 GHz, 15.6\", Full HD, 144Hz, 16GB, 512GB SSD, NVIDIA® GeForce RTX™ 2070 Max-Q 8GB, Free DOS, Black",
-    "Price": 7799.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/32629/32628277/images/res_9d9936c2c3c49c148c25f21718ab1778.jpg?width=450&amp;height=450&amp;hash=9D350469C0920DA7ABBA0BDF079EAE99",
-    "ProductTypeId": 1,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Sistem Desktop PC HP 290 G3 MT",
-    "Description": "Sistem Desktop PC HP 290 G3 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 4GB DDR4, 1TB, DVD-RW, Intel® UHD Graphics 630, Free DOS, Black",
-    "Price": 2199.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27845/27844773/images/res_c2bd16daba281ce8dc4322c313fb55d4.jpg?width=450&amp;height=450&amp;hash=B836E355BAC1BB31ADFD8DD2A618FA80",
-    "ProductTypeId": 4,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Laptop Gaming ASUS ROG Strix G15 G512LI",
-    "Description": "Laptop Gaming ASUS ROG Strix G15 G512LI cu procesor Intel® Core™ i5-10300H pana la 4.50 GHz, 15.6\", Full HD, 144Hz, 8GB, 512GB SSD, NVIDIA GeForce GTX 1650 Ti 4GB, Free DOS, Black",
-    "Price": 4499.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29938/29937179/images/res_51756f0996d627d2ec9a6af69415abbf.jpg?width=450&amp;height=450&amp;hash=42A19B281D91D171291142BAD7D8E844",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U",
-    "Description": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U pana la 4.20 GHz, 15.6”, Full HD, 8GB, 256GB SSD, Intel UHD Graphics 620, Free DOS, Black",
-    "Price": 3814.00,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29990/29989317/images/res_85398c25d5bfbba8dbcb994bb298b5e6.jpg?width=450&amp;height=450&amp;hash=0F7ADE24962D5B6ED908754958CEA178",
-    "ProductTypeId": 2,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Sistem Desktop PC Serioux",
-    "Description": "Sistem Desktop PC Serioux cu procesor AMD Ryzen 3 3200G pana la 4.0GHz, 8GB DDR4, 256GB SSD + 1TB HDD, Radeon™ Vega 8",
-    "Price": 1599.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/24343/24342051/images/res_e201754022e02ab3a0763f8cf2ed3452.jpg?width=450&amp;height=450&amp;hash=3DFFF34BC1072C71D4C730F811A0F4B1",
-    "ProductTypeId": 3,
-    "ProductBrandId": 6
-  },
-  {
-    "Name": "Sistem Desktop PC Dell OptiPlex 3070 MT",
-    "Description": "Sistem Desktop PC Dell OptiPlex 3070 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 8GB DDR4, 256GB SSD M.2 PCIe, Intel UHD Graphics 630, Microsoft Windows 10 Pro, Black",
-    "Price": 3399.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27865/27864735/images/res_485287b866ea14e12cdedb7d2a652fcd.jpg?width=450&amp;height=450&amp;hash=37DD0DB8EA439324EC514A3B45297BD6",
-    "ProductTypeId": 4,
-    "ProductBrandId": 5
-  },
-  {
-    "Name": "Laptop Gaming OMEN by HP 15-dh1009nq",
-    "Description": "Laptop Gaming OMEN by HP 15-dh1009nq cu procesor Intel® Core™ i7-10750H pana la 5.00 GHz, 15.6\", Full HD, 144Hz, 16GB, 512GB SSD, NVIDIA® GeForce RTX™ 2070 Max-Q 8GB, Free DOS, Black",
-    "Price": 7799.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/32629/32628277/images/res_9d9936c2c3c49c148c25f21718ab1778.jpg?width=450&amp;height=450&amp;hash=9D350469C0920DA7ABBA0BDF079EAE99",
-    "ProductTypeId": 1,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Sistem Desktop PC HP 290 G3 MT",
-    "Description": "Sistem Desktop PC HP 290 G3 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 4GB DDR4, 1TB, DVD-RW, Intel® UHD Graphics 630, Free DOS, Black",
-    "Price": 2199.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27845/27844773/images/res_c2bd16daba281ce8dc4322c313fb55d4.jpg?width=450&amp;height=450&amp;hash=B836E355BAC1BB31ADFD8DD2A618FA80",
-    "ProductTypeId": 4,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Laptop Gaming ASUS ROG Strix G15 G512LI",
-    "Description": "Laptop Gaming ASUS ROG Strix G15 G512LI cu procesor Intel® Core™ i5-10300H pana la 4.50 GHz, 15.6\", Full HD, 144Hz, 8GB, 512GB SSD, NVIDIA GeForce GTX 1650 Ti 4GB, Free DOS, Black",
-    "Price": 4499.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29938/29937179/images/res_51756f0996d627d2ec9a6af69415abbf.jpg?width=450&amp;height=450&amp;hash=42A19B281D91D171291142BAD7D8E844",
-    "ProductTypeId": 1,
-    "ProductBrandId": 1
-  },
-  {
-    "Name": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U",
-    "Description": "Laptop Lenovo ThinkPad E15 cu procesor Intel Core i5-10210U pana la 4.20 GHz, 15.6”, Full HD, 8GB, 256GB SSD, Intel UHD Graphics 620, Free DOS, Black",
-    "Price": 3814.00,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/29990/29989317/images/res_85398c25d5bfbba8dbcb994bb298b5e6.jpg?width=450&amp;height=450&amp;hash=0F7ADE24962D5B6ED908754958CEA178",
-    "ProductTypeId": 2,
-    "ProductBrandId": 3
-  },
-  {
-    "Name": "Sistem Desktop PC Serioux",
-    "Description": "Sistem Desktop PC Serioux cu procesor AMD Ryzen 3 3200G pana la 4.0GHz, 8GB DDR4, 256GB SSD + 1TB HDD, Radeon™ Vega 8",
-    "Price": 1599.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/24343/24342051/images/res_e201754022e02ab3a0763f8cf2ed3452.jpg?width=450&amp;height=450&amp;hash=3DFFF34BC1072C71D4C730F811A0F4B1",
-    "ProductTypeId": 3,
-    "ProductBrandId": 6
-  },
-  {
-    "Name": "Sistem Desktop PC Dell OptiPlex 3070 MT",
-    "Description": "Sistem Desktop PC Dell OptiPlex 3070 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 8GB DDR4, 256GB SSD M.2 PCIe, Intel UHD Graphics 630, Microsoft Windows 10 Pro, Black",
-    "Price": 3399.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27865/27864735/images/res_485287b866ea14e12cdedb7d2a652fcd.jpg?width=450&amp;height=450&amp;hash=37DD0DB8EA439324EC514A3B45297BD6",
-    "ProductTypeId": 4,
-    "ProductBrandId": 5
-  },
-  {
-    "Name": "Laptop Gaming OMEN by HP 15-dh1009nq",
-    "Description": "Laptop Gaming OMEN by HP 15-dh1009nq cu procesor Intel® Core™ i7-10750H pana la 5.00 GHz, 15.6\", Full HD, 144Hz, 16GB, 512GB SSD, NVIDIA® GeForce RTX™ 2070 Max-Q 8GB, Free DOS, Black",
-    "Price": 7799.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/32629/32628277/images/res_9d9936c2c3c49c148c25f21718ab1778.jpg?width=450&amp;height=450&amp;hash=9D350469C0920DA7ABBA0BDF079EAE99",
-    "ProductTypeId": 1,
-    "ProductBrandId": 2
-  },
-  {
-    "Name": "Sistem Desktop PC HP 290 G3 MT",
-    "Description": "Sistem Desktop PC HP 290 G3 MT cu procesor Intel® Core™ i5-9500 pana la 4.40 GHz, Coffee Lake, 4GB DDR4, 1TB, DVD-RW, Intel® UHD Graphics 630, Free DOS, Black",
-    "Price": 2199.99,
-    "PictureUrl": "https://s13emagst.akamaized.net/products/27845/27844773/images/res_c2bd16daba281ce8dc4322c313fb55d4.jpg?width=450&amp;height=450&amp;hash=B836E355BAC1BB31ADFD8DD2A618FA80",
-    "ProductTypeId": 4,
-    "ProductBrandId": 2
+    "ProductBrandId": 2,
+    "ProductUrl": "https://www.emag.ro/laptop-asus-x509ja-cu-procesor-intelr-coretm-i5-1035g1-pana-la-3-60-ghz-15-6-full-hd-8gb-512gb-ssd-intelr-uhd-graphics-free-dos-transparent-silver-x509ja-ej024/pd/DKJGSMMBM/"
   }
 ]

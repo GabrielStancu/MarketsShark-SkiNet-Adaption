@@ -20,5 +20,7 @@ namespace API.Dtos
         public string Brand { get; set; }
         [Required]
         public string Type { get; set; }
+        [Required]
+        public string ProductUrl { get; set; }
     }
 }

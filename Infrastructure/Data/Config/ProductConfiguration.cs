@@ -17,6 +17,7 @@ namespace Infrastructure.Data.Config
                 .HasForeignKey(p => p.ProductBrandId);
             builder.HasOne(t => t.ProductType).WithMany()
                 .HasForeignKey(p => p.ProductTypeId);
+            builder.Property(p => p.ProductUrl).HasMaxLength(180);
         }
     }
 }
