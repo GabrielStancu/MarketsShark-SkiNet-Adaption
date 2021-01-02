@@ -105,12 +105,12 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(180);
+                        .HasMaxLength(10000);
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(100);
+                        .HasMaxLength(200);
 
                     b.Property<string>("PictureUrl")
                         .IsRequired()
@@ -127,7 +127,7 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("ProductUrl")
                         .HasColumnType("TEXT")
-                        .HasMaxLength(180);
+                        .HasMaxLength(560);
 
                     b.HasKey("Id");
 

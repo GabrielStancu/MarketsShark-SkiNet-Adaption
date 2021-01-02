@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20210102092743_ProductUrlAdded")]
-    partial class ProductUrlAdded
+    [Migration("20210102162025_AddedUrlLinkToProducts")]
+    partial class AddedUrlLinkToProducts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -107,12 +107,12 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(180);
+                        .HasMaxLength(10000);
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT")
-                        .HasMaxLength(100);
+                        .HasMaxLength(200);
 
                     b.Property<string>("PictureUrl")
                         .IsRequired()
@@ -129,7 +129,7 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("ProductUrl")
                         .HasColumnType("TEXT")
-                        .HasMaxLength(180);
+                        .HasMaxLength(560);
 
                     b.HasKey("Id");
 

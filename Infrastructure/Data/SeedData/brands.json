@@ -21,6 +21,66 @@
   },
   {
     "Id": 6,
-    "Name": "Serioux"
+    "Name": "Acer"
+  },
+  {
+    "Id": 7,
+    "Name": "MSI"
+  },
+  {
+    "Id": 8,
+    "Name": "Clevo"
+  },
+  {
+    "Id": 9,
+    "Name": "Microsoft"
+  },
+  {
+    "Id": 10,
+    "Name": "Huawei"
+  },
+  {
+    "Id": 11,
+    "Name": "Alienware"
+  },
+  {
+    "Id": 12,
+    "Name": "Razer"
+  },	
+  {
+    "Id": 13,
+    "Name": "Toshiba"
+  },
+  {
+    "Id": 14,
+    "Name": "Weigo"
+  },
+  {
+    "Id": 15,
+    "Name": "Insys"
+  },
+  {
+    "Id": 16,
+    "Name": "Durabook"
+  },
+  {
+    "Id": 17,
+    "Name": "Hewlett Packard"
+  },
+  {
+    "Id": 18,
+    "Name": "Qilive"
+  },
+  {
+    "Id": 19,
+    "Name": "Allview"
+  },
+  {
+    "Id": 20,
+    "Name": "Prestigio"
+  },
+  {
+    "Id": 21,
+    "Name": "Others"
   }
 ]

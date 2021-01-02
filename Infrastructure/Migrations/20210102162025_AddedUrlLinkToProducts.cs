@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Migrations
 {
-    public partial class ProductUrlAdded : Migration
+    public partial class AddedUrlLinkToProducts : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -84,13 +84,13 @@ namespace Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(maxLength: 100, nullable: false),
-                    Description = table.Column<string>(maxLength: 180, nullable: false),
+                    Name = table.Column<string>(maxLength: 200, nullable: false),
+                    Description = table.Column<string>(maxLength: 10000, nullable: false),
                     Price = table.Column<double>(type: "decimal(18,2)", nullable: false),
                     PictureUrl = table.Column<string>(nullable: false),
                     ProductTypeId = table.Column<int>(nullable: false),
                     ProductBrandId = table.Column<int>(nullable: false),
-                    ProductUrl = table.Column<string>(maxLength: 180, nullable: true)
+                    ProductUrl = table.Column<string>(maxLength: 560, nullable: true)
                 },
                 constraints: table =>
                 {
