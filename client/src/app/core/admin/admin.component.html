@@ -23,19 +23,19 @@
         <input type="checkbox" id="emag" name="emag" value="emag" 
             [checked]="enabledVendors[0]" (change)="enableVendor(0)">
         <label>
-            <strong>eMag</strong>
+            <strong>eMAG</strong>
             <br>
             <span class="label-description">https://www.emag.ro/</span>
         </label>
     </div>
     
     <div class="container mt-5">
-        <input type="checkbox" id="cel" name="cel" value="cel" 
+        <input type="checkbox" id="evomag" name="evomag" value="evomag" 
             [checked]="enabledVendors[1]" (change)="enableVendor(1)">
         <label>
-            <strong>cel.ro</strong>
+            <strong>evoMAG.ro</strong>
             <br>
-            <span class="label-description">https://www.cel.ro/</span>
+            <span class="label-description">https://www.evomag.ro/</span>
         </label>
     </div>
     
@@ -48,6 +48,14 @@
             <span class="label-description">https://www.pcgarage.ro/</span>
         </label>   
     </div>
+
+    <div class="container mt-5">
+        <h3>Manually update currently stored products (they are updated periodically):</h3>
+    </div>
+
+    <div class="container mt-5">
+        <button (click)="updateProducts()" class="btn btn-outline-info mr-5">Update products</button>
+    </div>  
 </ng-container>
 
 

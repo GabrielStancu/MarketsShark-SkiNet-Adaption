@@ -1,9 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, timer } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { AccountService } from 'src/app/account/account.service';
 import { IUser } from 'src/app/shared/models/user';
+import { ShopService } from 'src/app/shop/shop.service';
 import { environment } from 'src/environments/environment';
+import { BusyService } from '../services/busy.service';
 
 @Component({
   selector: 'app-test-error',
@@ -16,11 +19,12 @@ export class AdminComponent implements OnInit {
   enabled = 'enabled';
   disabled = 'disabled';
   vendors = ['emag', 'cel.ro', 'pcgarage'];
-  enabledVendors = [false, false, false];
+  enabledVendors = [true, true, true];
   currentUser$: Observable<IUser>;
   adminEmail: string;
 
-  constructor(private http: HttpClient, private accountService: AccountService) { }
+  constructor(private http: HttpClient, private accountService: AccountService,
+              private shopService: ShopService, private busyService: BusyService) { }
 
   ngOnInit(): void {
     this.getCurrentEnabledVendors();
@@ -79,5 +83,11 @@ export class AdminComponent implements OnInit {
     } else if (localStorage.getItem(this.vendors[id]) === this.disabled){
       localStorage.setItem(this.vendors[id], this.enabled);
     }
+  }
+
+  updateProducts(): void{
+    this.shopService.getProducts(false);
+    this.busyService.busy();
+    timer(30000).subscribe(x => { this.busyService.idle(); });
   }
 }

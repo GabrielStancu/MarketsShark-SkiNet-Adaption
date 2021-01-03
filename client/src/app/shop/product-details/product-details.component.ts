@@ -49,6 +49,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   goToProductPage(): void{
+    console.log(this.product.productUrl);
     this.document.location.href = this.product.productUrl;
   }
 }
