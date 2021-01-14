@@ -1,28 +1,28 @@
 [
   {
     "Id": 1,
-    "ShortName": "UPS1",
+    "ShortName": "Fan Courier",
     "Description": "Fastest delivery time",
-    "DeliveryTime": "1-2 Days",
-    "Price": 10
+    "DeliveryTime": "2-3 Days",
+    "Price": 20
   },
   {
     "Id": 2,
-    "ShortName": "UPS2",
+    "ShortName": "Urgent Cargus",
     "Description": "Get it within 5 days",
-    "DeliveryTime": "2-5 Days",
-    "Price": 5
+    "DeliveryTime": "3-5 Days",
+    "Price": 10
   },
   {
     "Id": 3,
-    "ShortName": "UPS3",
+    "ShortName": "Sameday Delivery",
     "Description": "Slower but cheap",
     "DeliveryTime": "5-10 Days",
-    "Price": 2
+    "Price": 4
   },
   {
     "Id": 4,
-    "ShortName": "FREE",
+    "ShortName": "Postal Office",
     "Description": "Free! You get what you pay for",
     "DeliveryTime": "1-2 Weeks",
     "Price": 0

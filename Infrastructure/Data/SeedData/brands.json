@@ -49,34 +49,10 @@
   },
   {
     "Id": 13,
-    "Name": "Weigo"
-  },
-  {
-    "Id": 14,
-    "Name": "Insys"
-  },
-  {
-    "Id": 15,
-    "Name": "Durabook"
-  },
-  {
-    "Id": 16,
-    "Name": "Qilive"
-  },
-  {
-    "Id": 17,
-    "Name": "Allview"
-  },
-  {
-    "Id": 18,
-    "Name": "Prestigio"
-  },
-  {
-    "Id": 19,
     "Name": "Fujitsu"
   },
   {
-    "Id": 20,
+    "Id": 14,
     "Name": "Others"
   }
 ]

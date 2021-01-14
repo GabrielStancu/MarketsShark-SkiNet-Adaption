@@ -4,7 +4,6 @@ import { Observable, timer } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { AccountService } from 'src/app/account/account.service';
 import { IUser } from 'src/app/shared/models/user';
-import { ShopService } from 'src/app/shop/shop.service';
 import { environment } from 'src/environments/environment';
 import { BusyService } from '../services/busy.service';
 
@@ -24,7 +23,7 @@ export class AdminComponent implements OnInit {
   adminEmail: string;
 
   constructor(private http: HttpClient, private accountService: AccountService,
-              private shopService: ShopService, private busyService: BusyService) { }
+              private busyService: BusyService) { }
 
   ngOnInit(): void {
     this.getCurrentEnabledVendors();
@@ -86,8 +85,7 @@ export class AdminComponent implements OnInit {
   }
 
   updateProducts(): void{
-    this.shopService.getProducts(false);
     this.busyService.busy();
-    timer(30000).subscribe(x => { this.busyService.idle(); });
+    timer(120000).subscribe(x => { this.busyService.idle(); });
   }
 }

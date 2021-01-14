@@ -8,6 +8,7 @@ using Core.Entities;
 using System;
 using Core.Entities.OrderAggregate;
 using Microsoft.EntityFrameworkCore;
+using Infrastructure.Data.WebScraper;
 
 namespace Infrastructure.Data
 {
@@ -45,12 +46,25 @@ namespace Infrastructure.Data
                 
                 if(!context.Products.Any())
                 {
-                    var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
-                    var products = JsonSerializer.Deserialize<List<Product>>(productsData);
+                    List<Product> products;
+                    try
+                    {
+                        ScrapeParser scrapeParser = new ScrapeParser();
+                        products = scrapeParser.ParseProducts(true, true, false);
+                    }
+                    catch(Exception)
+                    {
+                        var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
+                        products = JsonSerializer.Deserialize<List<Product>>(productsData);
+
+                        var logger = loggerFactory.CreateLogger<StoreContextSeed>();
+                        logger.LogError("Too many accesses.");
+                    }
+                    
 
                     foreach (var item in products)
                     {
-                        context.Products.Add(item);
+                        context.Products.Add(item); 
                     }
 
                     await context.SaveChangesAsync();

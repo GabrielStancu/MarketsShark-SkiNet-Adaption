@@ -1,6 +1,8 @@
+using System;
+
 namespace Core.Entities
 {
-    public class Product : BaseEntity
+    public class Product : BaseEntity, IEquatable<Product>
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -11,5 +13,15 @@ namespace Core.Entities
         public ProductBrand ProductBrand { get; set; }  
         public int ProductBrandId { get; set; }
         public string ProductUrl { get; set; }
+
+        public bool Equals(Product other)
+        {
+            if (other.ProductUrl.ToUpper().Equals(ProductUrl))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
