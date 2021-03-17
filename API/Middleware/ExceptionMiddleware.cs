@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace API.Middleware
 {
+    //handles the exceptions in the request pipe => cleaner way to display the errors to the client 
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;

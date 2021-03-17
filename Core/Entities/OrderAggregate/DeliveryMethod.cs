@@ -1,5 +1,6 @@
 namespace Core.Entities.OrderAggregate
 {
+    //the option of the user for the delivery
     public class DeliveryMethod : BaseEntity
     {
         public string ShortName {get; set; }

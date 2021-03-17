@@ -1,7 +1,9 @@
 namespace Core.Entities.OrderAggregate
 {
+    //entity framework format of the ordered item 
     public class OrderItem : BaseEntity
     {
+        //required by entity framework
         public OrderItem()
         {
         }

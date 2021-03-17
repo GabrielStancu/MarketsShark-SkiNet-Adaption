@@ -1,5 +1,6 @@
 namespace Core.Entities
 {
+    //the shape of an item (product) once it is added to the basket 
     public class BasketItem
     {
         public int Id { get; set; }

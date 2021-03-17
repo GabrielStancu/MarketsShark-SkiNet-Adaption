@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace API.Helpers
 {
+    //attribute used to mark what's cache-able
     public class CachedAttribute : Attribute, IAsyncActionFilter
     {
         private readonly int _timeToLiveSeconds;

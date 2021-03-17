@@ -5,6 +5,7 @@ using Core.Entities;
 
 namespace Infrastructure.Data.WebScraper
 {
+    //base scraper in the builder design pattern 
     public abstract class Scraper
     {
         protected const string inchesSign = "''";

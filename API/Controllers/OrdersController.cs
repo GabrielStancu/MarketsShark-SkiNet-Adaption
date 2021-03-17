@@ -13,10 +13,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    //handles requests at [website]/orders
     [Authorize]
     public class OrdersController : BaseApiController
     {
+        //injectable service, provides the orders api over the server classes
         private readonly IOrderService _orderService;
+        //maps the order to the desired format to be sent to the client 
         private readonly IMapper _mapper;
         public OrdersController(IOrderService orderService, IMapper mapper)
         {
@@ -24,6 +27,7 @@ namespace API.Controllers
             _orderService = orderService;
         }
 
+        //whenever a new order is placed (checkout phase)
         [HttpPost]
         public async Task<ActionResult<Order>> CreateOrder(OrderDto orderDto)
         {
@@ -39,6 +43,7 @@ namespace API.Controllers
             return Ok(order);
         }
 
+        //when the use wants to see his previous orders
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<OrderDto>>> GetOrdersForUser()
         {
@@ -49,6 +54,7 @@ namespace API.Controllers
             return Ok(_mapper.Map<IReadOnlyList<Order>, IReadOnlyList<OrderToReturnDto>>(orders));
         }
 
+        //get a particular oder for user by id
         [HttpGet("{id}")]
         public async Task<ActionResult<OrderToReturnDto>> GetOrderByIdForUser(int id)
         {
@@ -61,6 +67,7 @@ namespace API.Controllers
             return _mapper.Map<Order, OrderToReturnDto>(order);
         }
 
+        //get delivery methods from store context db
         [HttpGet("deliveryMethods")]
         public async Task<ActionResult<IReadOnlyList<DeliveryMethod>>> GetDeliveryMethods()
         {

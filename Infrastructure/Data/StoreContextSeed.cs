@@ -12,12 +12,14 @@ using Infrastructure.Data.WebScraper;
 
 namespace Infrastructure.Data
 {
+    //seeds data in the database 
     public class StoreContextSeed
     {
         public static async Task SeedAsync(StoreContext context, ILoggerFactory loggerFactory)
         {
             try 
             {
+                //product brands 
                 if(!context.ProductBrands.Any())
                 {
                     var brandsData = File.ReadAllText("../Infrastructure/Data/SeedData/brands.json");
@@ -31,6 +33,7 @@ namespace Infrastructure.Data
                     await context.SaveChangesAsync();
                 }          
 
+                //product types 
                 if(!context.ProductTypes.Any())
                 {
                     var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
@@ -44,6 +47,7 @@ namespace Infrastructure.Data
                     await context.SaveChangesAsync();
                 }               
                 
+                //products; if too many requests => use stored version of products 
                 if(!context.Products.Any())
                 {
                     List<Product> products;

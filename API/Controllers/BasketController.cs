@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    //controller that handles requests at [website]/basket
     public class BasketController : BaseApiController
     {
+        //handles the communication with the basket database (redis)
         private readonly IBasketRepository _basketRepository;
+        //maps the basket to the object to be sent back to the client over http
         private readonly IMapper _mapper;
         public BasketController(IBasketRepository basketRepository, IMapper mapper)
         {
@@ -17,6 +20,7 @@ namespace API.Controllers
             _basketRepository = basketRepository;
         }
 
+        //gets the id of the basket 
         [HttpGet]
         public async Task<ActionResult<CustomerBasket>> GetBasketById(string id)
         {
@@ -25,6 +29,7 @@ namespace API.Controllers
             return Ok(basket ?? new CustomerBasket(id));
         }
 
+        //called whenever a new product is placed in the basket
         [HttpPost]
         public async Task<ActionResult<CustomerBasket>> UpdateBasket(CustomerBasketDto basket)
         {
@@ -35,6 +40,7 @@ namespace API.Controllers
             return Ok(updatedBasket);
         }
 
+        //deleted from local storage after a certain amount of time
         [HttpDelete]
         public async Task DeleteBasketAsync(string id)
         {

@@ -12,6 +12,7 @@ using Product = Core.Entities.Product;
 
 namespace Infrastructure.Services
 {
+    //payment service for dependency injection over the app
     public class PaymentService : IPaymentService
     {
         private readonly IBasketRepository _basketRepository;
@@ -26,9 +27,10 @@ namespace Infrastructure.Services
             _basketRepository = basketRepository;
         }
 
+        //sets the required information about the payment 
         public async Task<CustomerBasket> CreateOrUpdatePaymentIntent(string basketId)
         {
-            StripeConfiguration.ApiKey = _config["StripeSettings:SecretKey"];
+            StripeConfiguration.ApiKey = _config["StripeSettings:SecretKey"]; //set this in the configuration file with your value
 
             var basket = await _basketRepository.GetBasketAsync(basketId);
 
@@ -84,6 +86,7 @@ namespace Infrastructure.Services
             return basket;
         }
 
+        //called in case some payment fails 
         public async Task<Order> UpdateOrderPaymentFailed(string paymentIntentId)
         {
             var spec = new OrderByPaymentIntentIdSpecification(paymentIntentId);
@@ -97,6 +100,7 @@ namespace Infrastructure.Services
             return order;
         }
 
+        //called on payment success 
         public async Task<Order> UpdateOrderPaymentSucceeded(string paymentIntentId)
         {
             var spec = new OrderByPaymentIntentIdSpecification(paymentIntentId);

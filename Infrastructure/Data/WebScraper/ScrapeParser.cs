@@ -8,6 +8,7 @@ namespace Infrastructure.Data.WebScraper
 {
     public class ScrapeParser
     {
+        //parses the items collected from all websites to a single list; eventually serializes them 
         private static List<Product> _products;
         public List<Product> ParseProducts(bool enableEmag, bool enablePcGarage, bool enableEvoMag)
         {

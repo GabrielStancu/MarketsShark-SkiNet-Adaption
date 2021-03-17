@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Data
 {
+    //the actual entity that establieshes connection to the database in entity framework
     public class StoreContext : DbContext
     {
         public StoreContext(DbContextOptions<StoreContext> options) : base(options)

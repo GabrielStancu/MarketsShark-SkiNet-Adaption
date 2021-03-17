@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace API.Helpers
 {
+    //used for correctly form the url of each product to be displayed 
     public class ProductUrlResolver : IValueResolver<Product, ProductToReturnDto, string>
     {
         private readonly IConfiguration _config;

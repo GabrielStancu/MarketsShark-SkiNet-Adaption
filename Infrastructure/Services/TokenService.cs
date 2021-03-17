@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Services
 {
+    //service used for JWT tokenization
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _config;
@@ -17,9 +18,10 @@ namespace Infrastructure.Services
         public TokenService(IConfiguration config)
         {
             _config = config;
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Token:Key"]));
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Token:Key"])); //set this to the desired value s
         }
 
+        //created the token for the current user 
         public string CreateToken(AppUser user)
         {
             var claims = new List<Claim>

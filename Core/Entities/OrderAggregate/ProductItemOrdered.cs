@@ -1,7 +1,9 @@
 namespace Core.Entities.OrderAggregate
 {
+    //flattened version of entity framework product
     public class ProductItemOrdered
     {
+        //required 
         public ProductItemOrdered()
         {
         }

@@ -1,5 +1,6 @@
 namespace API.Dtos
 {
+    //relevant data about the user, flattened for http response 
     public class UserDto
     {
         public string Email { get; set; }   

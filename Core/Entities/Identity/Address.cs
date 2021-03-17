@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Entities.Identity
 {
+    //used for storing the address of the user 
     public class Address
     {
         public int Id { get; set; } 

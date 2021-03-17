@@ -1,5 +1,6 @@
 namespace API.Dtos
 {
+    //reduced number of fields for returning over response to client s
     public class ProductToReturnDto
     {
         public int Id {get; set; }

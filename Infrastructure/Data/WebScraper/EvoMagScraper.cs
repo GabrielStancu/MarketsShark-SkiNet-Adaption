@@ -5,6 +5,7 @@ using Core.Entities;
 
 namespace Infrastructure.Data.WebScraper
 {
+    //scraped the evomag website 
     public class EvoMagScraper : Scraper
     {
         public EvoMagScraper()

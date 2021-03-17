@@ -1,5 +1,6 @@
 namespace API.Dtos
 {
+    //basket item in the flattened in the desired format for the http request
     public class OrderItemDto
     {
         public int ProductId { get; set; }

@@ -1,5 +1,6 @@
 namespace Core.Specifications
 {
+    //used for grouping the items for pagination
     public class ProductSpecParams
     {
         private const int MaxPageSize = 50;

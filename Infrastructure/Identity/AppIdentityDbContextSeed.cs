@@ -7,6 +7,7 @@ namespace Infrastructure.Identity
 {
     public class AppIdentityDbContextSeed
     {
+        //insert basic user in database for testing purposes 
         public static async Task SeedUserAsync(UserManager<AppUser> userManager)
         {
             if(!userManager.Users.Any())

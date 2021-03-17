@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
+    //made for testing purposes, test most common bugs in server-client communication
     public class BuggyController : BaseApiController
     {
         private readonly StoreContext _context;
@@ -13,6 +14,7 @@ namespace API.Controllers
             _context = context;
         }
 
+        //unauthorized access
         [HttpGet("testauth")]
         [Authorize]
         public ActionResult<string> GetSecretText()
@@ -20,6 +22,7 @@ namespace API.Controllers
             return "secret stuff";
         }
 
+        //not found resource
         [HttpGet("notfound")]
         public ActionResult GetNotFoundRequest()
         {
@@ -33,6 +36,7 @@ namespace API.Controllers
             return Ok();
         }
 
+        //internal server error
         [HttpGet("servererror")]
         public ActionResult GetServerError()
         {
@@ -43,6 +47,7 @@ namespace API.Controllers
             return Ok();
         }
 
+        //bad format for the request
         [HttpGet("badrequest")]
         public ActionResult GetBadRequest()
         {

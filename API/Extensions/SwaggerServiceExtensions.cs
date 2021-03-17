@@ -4,6 +4,7 @@ using Microsoft.OpenApi.Models;
 
 namespace API.Extensions
 {
+    //extension class, for swagger documentation of the http requests
     public static class SwaggerServiceExtensions
     {
         public static IServiceCollection AddSwaggerDocumentation(this IServiceCollection services)

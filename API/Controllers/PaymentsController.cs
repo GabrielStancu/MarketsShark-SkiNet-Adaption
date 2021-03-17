@@ -11,10 +11,14 @@ using Order = Core.Entities.OrderAggregate.Order;
 
 namespace API.Controllers
 {
+    //called whenever a payment through stripe is received 
     public class PaymentsController : BaseApiController
     {
+        //dependency injection service to provide payment functionality accross the server classes 
         private readonly IPaymentService _paymentService;
+        //secret key for identifying the stripe account, replace with your own
         private const string WhSecret = "whsec_1bAAzQujAo5epzvG9jbBGi1rCZoxaDPT";
+        //used for logging errors and exceptions
         private readonly ILogger<IPaymentService> _logger;
         public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger)
         {
@@ -22,6 +26,7 @@ namespace API.Controllers
             _paymentService = paymentService;
         }
 
+        //called when the user proceeds to payment 
         [Authorize]
         [HttpPost("{basketId}")]
         public async Task<ActionResult<CustomerBasket>> CreateOrUpdatePaymentIntent(string basketId)
@@ -33,6 +38,7 @@ namespace API.Controllers
             return basket;
         }
 
+        //receive stripe response
         [HttpPost("webhook")]
         public async Task<ActionResult> StripeWebhook()
         {

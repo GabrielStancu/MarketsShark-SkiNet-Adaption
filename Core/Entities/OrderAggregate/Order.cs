@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Core.Entities.OrderAggregate
 {
+    //the entity framework version of the order 
     public class Order : BaseEntity
     {
         public Order()

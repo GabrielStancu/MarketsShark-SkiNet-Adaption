@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API.Dtos
 {
+    //the address to be sent to the client 
     public class AddressDto
     {
         [Required]

@@ -4,6 +4,7 @@ using Core.Entities.OrderAggregate;
 
 namespace API.Dtos
 {
+    //flattened order for the client 
     public class OrderToReturnDto
     {
         public int Id { get; set; }

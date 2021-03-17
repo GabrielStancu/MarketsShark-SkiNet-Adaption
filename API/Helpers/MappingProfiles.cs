@@ -8,6 +8,7 @@ namespace API.Helpers
 {
     public class MappingProfiles : Profile
     {
+        //the mapping profiles we use to flatten complex object to simple ones to be sent over http responses 
         public MappingProfiles()
         {
             CreateMap<Product, ProductToReturnDto>()

@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 
 namespace Core.Specifications
 {
+    //used for filtering the items 
     public class BaseSpecification<T> : ISpecification<T>
     {
         public BaseSpecification(Expression<Func<T, bool>> criteria)

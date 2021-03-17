@@ -2,6 +2,7 @@ using System;
 
 namespace Core.Entities
 {
+    //the extended (full) format of a product from our database 
     public class Product : BaseEntity, IEquatable<Product>
     {
         public string Name { get; set; }

@@ -4,6 +4,7 @@ using Core.Entities.OrderAggregate;
 
 namespace Core.Specifications
 {
+    //the order together with the items data and the order time
     public class OrdersWithItemsAndOrderingSpecification : BaseSpecification<Order>
     {
         public OrdersWithItemsAndOrderingSpecification(string email) : base(o => o.BuyerEmail == email)

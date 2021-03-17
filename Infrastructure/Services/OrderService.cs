@@ -8,6 +8,7 @@ using Core.Specifications;
 
 namespace Infrastructure.Services
 {
+    //used for the dependency injection pool, makes order functionality available accross the server 
     public class OrderService : IOrderService
     {
         private readonly IBasketRepository _basketRepo;

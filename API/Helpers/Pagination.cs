@@ -2,6 +2,7 @@ using System.Collections.Generic;
 
 namespace API.Helpers
 {
+    //used for grouping the objects on pages => lazy loading (later)
     public class Pagination<T> where T: class 
     {
         public Pagination(int pageIndex, int pageSize, int count, IReadOnlyList<T> data)

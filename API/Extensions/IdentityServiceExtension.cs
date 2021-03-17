@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace API.Extensions
 {
+    //extension class / method, used for adding the JWT functionality to the user
     public static class IdentityServiceExtension
     {
         public static IServiceCollection AddIdentityServices(this IServiceCollection services, 

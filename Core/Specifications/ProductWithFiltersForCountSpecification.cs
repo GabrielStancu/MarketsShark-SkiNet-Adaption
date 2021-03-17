@@ -2,6 +2,7 @@ using Core.Entities;
 
 namespace Core.Specifications
 {
+    //used for getting the quantity of the items once they are placed in a basket 
     public class ProductWithFiltersForCountSpecification : BaseSpecification<Product>
     {
         public ProductWithFiltersForCountSpecification(ProductSpecParams productParams)

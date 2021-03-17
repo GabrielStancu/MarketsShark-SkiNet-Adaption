@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    //handles the erros, helps the display in nice format for user
     [Route("errors/{code}")]
     [ApiExplorerSettings(IgnoreApi = true)]
     public class ErrorController : BaseApiController

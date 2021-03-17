@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API.Dtos
 {
+    //the data required to register; flattened 
     public class RegisterDto
     {
         [Required]

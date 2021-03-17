@@ -2,6 +2,7 @@ using Core.Entities;
 
 namespace Core.Specifications
 {
+    //used for getting the items by the required filters with the brands and types associated 
     public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
     {
         public ProductsWithTypesAndBrandsSpecification(ProductSpecParams productParams)

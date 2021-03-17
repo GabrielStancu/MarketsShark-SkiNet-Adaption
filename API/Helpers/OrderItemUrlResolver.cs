@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace API.Helpers
 {
+    //used for correctly configuring the url of each order 
     public class OrderItemUrlResolver : IValueResolver<OrderItem, OrderItemDto, string>
     {
         private readonly IConfiguration _config;

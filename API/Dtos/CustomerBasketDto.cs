@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace API.Dtos
 {
+    //the format of the basket to be sent to the client 
     public class CustomerBasketDto
     {
         [Required]

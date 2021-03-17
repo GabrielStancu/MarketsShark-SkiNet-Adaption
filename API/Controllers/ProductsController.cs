@@ -15,11 +15,16 @@ using API.Helpers;
 
 namespace API.Controllers
 {
+    //handles requests at [website]/products
     public class ProductsController : BaseApiController
     {
+        //handles the connection to the database with respect to the products
         private readonly IGenericRepository<Product> _productsRepo;
+        //database communication with respect to the brands 
         private readonly IGenericRepository<ProductBrand> _productBrandsRepo;
+        //database communication with respect to the product types
         private readonly IGenericRepository<ProductType> _productTypesRepo;
+        //maps the object to the desired format to be sent to the client 
         private readonly IMapper _mapper;
         public ProductsController(IGenericRepository<Product> productsRepo,
                 IGenericRepository<ProductBrand> productBrandsRepo, IGenericRepository<ProductType> productTypesRepo,
@@ -31,6 +36,7 @@ namespace API.Controllers
             _productsRepo = productsRepo;
         }
 
+    //get the products extracted with the web scraper 
     [Cached(600)]
     [HttpGet]
     public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts(
@@ -48,6 +54,7 @@ namespace API.Controllers
         return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, totalItems, data));
     }
 
+    //get a specific object with a specific id 
     [Cached(600)]
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -62,6 +69,7 @@ namespace API.Controllers
         return _mapper.Map<Product, ProductToReturnDto>(product);
     }
 
+    //get the brands in the database 
     [Cached(600)]
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
@@ -69,6 +77,7 @@ namespace API.Controllers
         return Ok(await _productBrandsRepo.ListAllAsync());
     }
 
+    //get the types in the database 
     [Cached(600)]
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()

@@ -13,11 +13,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    //controller that handles requests ar [website]/account
     public class AccountController : BaseApiController
     {
+        //manages the users from the database
         private readonly UserManager<AppUser> _userManager;
+        //manages the sign in process
         private readonly SignInManager<AppUser> _signInManager;
+        //generates JWT tokens for registering 
         private readonly ITokenService _tokenService;
+        //maps entities to objects to be sent over responses back to client 
         private readonly IMapper _mapper;
         public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenService tokenService, IMapper mapper)
         {
@@ -27,6 +32,7 @@ namespace API.Controllers
             _userManager = userManager;
         }
 
+        //get request, gets the currently logged in user, if any, by token association
         [Authorize]
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
@@ -41,12 +47,14 @@ namespace API.Controllers
             };
         }
 
+        //get request, querries the server wheater an email is in use of not (at sign up)
         [HttpGet("emailexists")]
         public async Task<ActionResult<bool>> CheckEmailExistsAsync([FromQuery] string email)
         {
             return await _userManager.FindByEmailAsync(email) != null;
         }
 
+        //gets the address (physiscal) of a user
         [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDto>> GetUserAddress()
@@ -56,6 +64,7 @@ namespace API.Controllers
             return _mapper.Map<Address, AddressDto>(user.Address);
         }
 
+        //update, if the user decides to change his shipping address
         [Authorize]
         [HttpPut("address")]
         public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto address)
@@ -71,6 +80,7 @@ namespace API.Controllers
             return BadRequest("Problem updating the user.");
         }
 
+        //post request, authenticates the user (using JWT)
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -88,6 +98,7 @@ namespace API.Controllers
             };
         }
 
+        //post request, registers the user, assigns a JWT token to the user 
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {

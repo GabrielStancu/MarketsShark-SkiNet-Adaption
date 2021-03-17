@@ -4,10 +4,12 @@ using Core.Entities;
 
 namespace Infrastructure.Data.WebScraper
 {
+    //scraped the emag website 
     public class EmagScraper : Scraper
     {
         public EmagScraper()
         {
+            //the urls we extract information from 
             Urls = new List<(string url, int typeId)>
             {
                 ("https://www.emag.ro/laptopuri/c?ref=hp_menu_quick-nav_1_1&type=category", 1),
@@ -28,11 +30,15 @@ namespace Infrastructure.Data.WebScraper
                 ("https://www.emag.ro/desktop-pc/p7/c", 2)
             };
         }
+
+        //sets the regex pattern for the price
         public new Scraper WithPriceRegex(string regex)
         {
             this.PriceRegex = regex;
             return this;
         }
+
+        //sets the regex pattern for the url of the product
 
         public new Scraper WithUrlRegex(string regex)
         {
@@ -48,6 +54,8 @@ namespace Infrastructure.Data.WebScraper
 
             return products;
         }
+
+        //gets all product details apart from the url and price
 
         protected override List<Product> GetProductsDetails(int typeId)
         {
@@ -97,6 +105,7 @@ namespace Infrastructure.Data.WebScraper
             return products;
         } 
 
+        //gets the prices of the products in a separate format
         private new void GetProductsPrices(List<Product> products)
         {
             MatchCollection matchCollectionInt = Regex.Matches(Data, PriceRegex);
@@ -113,6 +122,7 @@ namespace Infrastructure.Data.WebScraper
             }
         }
 
+        //the urls separately 
         private new void GetProductsUrls(List<Product> products)
         {
             MatchCollection matchCollectionUrl = Regex.Matches(this.Data, this.UrlRegex);

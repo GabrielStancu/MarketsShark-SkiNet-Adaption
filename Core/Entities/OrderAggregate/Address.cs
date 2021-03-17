@@ -1,7 +1,9 @@
 namespace Core.Entities.OrderAggregate
 {
+    //the identity format of the address
     public class Address
     {
+        //required by the entity framework
         public Address()
         {
         }

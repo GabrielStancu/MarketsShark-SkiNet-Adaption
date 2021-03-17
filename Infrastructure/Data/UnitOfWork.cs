@@ -6,6 +6,7 @@ using Core.Interfaces;
 
 namespace Infrastructure.Data
 {
+    //unit of work design pattern, used for synchronizing the updates between different repositories 
     public class UnitOfWork : IUnitOfWork
     {
         private readonly StoreContext _context;

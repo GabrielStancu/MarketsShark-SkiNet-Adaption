@@ -6,19 +6,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
 {
+    //database connection for the products 
     public class ProductRepository : IProductRepository
     {
+        //the database context
         private readonly StoreContext _context;
         public ProductRepository(StoreContext context)
         {
             _context = context;
         }
 
+        //get the available brands from database 
         public async Task<IReadOnlyList<ProductBrand>> GetProductBrandsAsync()
         {
             return await _context.ProductBrands.ToListAsync();
         }
 
+        //get the product by its id 
         public async Task<Product> GetProductByIdAsync(int id)
         {
             return await _context.Products
@@ -27,6 +31,7 @@ namespace Infrastructure.Data
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
 
+        //get all products 
         public async Task<IReadOnlyList<Product>> GetProductsAsync()
         {
             return await _context.Products 
@@ -35,6 +40,7 @@ namespace Infrastructure.Data
                 .ToListAsync();
         }
 
+        //get the types of the products 
         public async Task<IReadOnlyList<ProductType>> GetProductTypesAsync()
         {
             return await _context.ProductTypes.ToListAsync();

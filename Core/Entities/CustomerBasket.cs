@@ -2,8 +2,10 @@ using System.Collections.Generic;
 
 namespace Core.Entities
 {
+    //the format of the user's basket
     public class CustomerBasket
     {
+        //empty constructor required by entity framework
         public CustomerBasket()
         {
         }

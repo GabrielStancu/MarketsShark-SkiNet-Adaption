@@ -6,6 +6,7 @@ using StackExchange.Redis;
 
 namespace Infrastructure.Services
 {
+    //service used for caching data in the local storage of the user 
     public class ResponseCacheService : IResponseCacheService
     {
         private readonly IDatabase _database;
@@ -14,6 +15,7 @@ namespace Infrastructure.Services
             _database = redis.GetDatabase();
         }
 
+        //caches data received from server 
         public async Task CacheResponseAsync(string cacheKey, object response, TimeSpan timeToLive)
         {
             if (response == null)
@@ -31,6 +33,7 @@ namespace Infrastructure.Services
             await _database.StringSetAsync(cacheKey, serializedResponse, timeToLive);
         }
 
+        //gets cached data from the local storage 
         public async Task<string> GetCachedResponseAsync(string cacheKey)
         {
             var cachedResponse = await _database.StringGetAsync(cacheKey);

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace API.Extensions
 {
+    //extends the IServiceCollection class, used for adding services in the dependency injection pool; keep Program class clean
     public static class ApplicationServicesExtensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)

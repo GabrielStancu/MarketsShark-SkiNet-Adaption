@@ -5,6 +5,7 @@ using Core.Entities;
 
 namespace Infrastructure.Data.WebScraper
 {
+    //scrapes the pc garage website 
     public class PcGarageScraper : Scraper
     {
         public PcGarageScraper()
@@ -95,6 +96,7 @@ namespace Infrastructure.Data.WebScraper
             return products;
         }
 
+        //some collected items are gifts, remove them 
         private List<Product> GetGiftProducts(List<Product> products)
         {
             List<Product> giftProducts = new List<Product>();
